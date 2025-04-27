@@ -1,0 +1,9 @@
+# ninja log v6
+40	3934	7674470980220757	tests/CMakeFiles/tests.dir/test_WinSpeak.cpp.obj	f16bb695177622fd
+34	4165	7674470980220757	CMakeFiles/WinSpeak.dir/src/WinSpeak.cpp.obj	a7149e2a9bce19fa
+4165	4585	7674471021513981	libWinSpeak.a	ecbf7aac717d9c6a
+4586	4845	7674471025680382	tests/tests.exe	b36549674ac9ea2
+46	4495	7674471695194755	tests/CMakeFiles/tests.dir/test_WinSpeak.cpp.obj	f16bb695177622fd
+41	4657	7674471695194755	CMakeFiles/WinSpeak.dir/src/WinSpeak.cpp.obj	a7149e2a9bce19fa
+4657	4945	7674471741348804	libWinSpeak.a	ecbf7aac717d9c6a
+4945	5227	7674471744182759	tests/tests.exe	b36549674ac9ea2

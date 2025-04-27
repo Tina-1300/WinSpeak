@@ -1,0 +1,16 @@
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/WinSpeak.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/test.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/edit_cache.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/rebuild_cache.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/list_install_components.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/install.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/install/local.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/install/strip.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/tests.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/test.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/edit_cache.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/rebuild_cache.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/list_install_components.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/install.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/install/local.dir
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/CMakeFiles/install/strip.dir

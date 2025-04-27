@@ -1,0 +1,3 @@
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak/include/WinSpeak/ISpeak.hpp
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak/include/WinSpeak/WinSpeak.hpp
+C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak/lib/libWinSpeak.a
