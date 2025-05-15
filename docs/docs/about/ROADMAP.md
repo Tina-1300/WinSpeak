@@ -22,9 +22,8 @@ This document describes the planned features, future enhancements, and long-term
 |:--------|:---------------|:------:|
 | 1.0.0 | Master Volume Control | ✅ Done |
 | 1.0.0 | is_muted / get_volume / set_volume / set_mute Function | ✅ Done |
-| 1.1.0 | Speaker Initialization and Shutdown | 🔲 To Do |
-| 1.2.0 | Support for Controlling Multiple Audio Devices | 🔲 To Do |
-| 1.3.0 | Automatic Device Change Detection | 🔲 To Do |
+| 1.1.0 | Support for Controlling Multiple Audio Devices | 🔲 To Do |
+| 1.1.0 | Write Documentation                            | ✅ Done  |
 | 2.0.0 | Multi-Platform Release (Linux via Abstraction) | 🔲 To Do |
 
 ---

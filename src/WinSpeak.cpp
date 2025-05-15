@@ -17,7 +17,7 @@ namespace WinSpeak{
         CoUninitialize();
     }
 
-    [[nodiscard]] float WinSpeak::get_volume() const {
+    float WinSpeak::get_volume() const {
         float currentVolume = 0.0f;
         HRESULT hr = endpointVolume->GetMasterVolumeLevelScalar(&currentVolume);
         if (FAILED(hr)){
@@ -38,7 +38,7 @@ namespace WinSpeak{
         return true;
     }
 
-    [[nodiscard]] bool WinSpeak::is_muted() const {
+    bool WinSpeak::is_muted() const {
         BOOL isMuted = FALSE;
         HRESULT hr = endpointVolume->GetMute(&isMuted);
         if (FAILED(hr)){

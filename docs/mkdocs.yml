@@ -1,0 +1,44 @@
+site_name: WinSpeak
+
+# readthedocs
+#windmill-dark
+theme:
+  name: readthedocs
+  #locale: fr 
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - cpp
+
+markdown_extensions:
+  - callouts
+  - github-callouts
+
+nav:
+  - Welcome: index.md
+  - Documentation:
+      - Installation: installation.md 
+      - Features: features/features.md
+  - About:
+      - Announcements: announcements.md
+      - The team: about/team.md
+      - Contribute: about/contributing.md
+      - Licence: about/license.md
+      - Changelog: about/CHANGELOG.md
+      - Security: about/SECURITY.md
+      - Code of conduct: about/CODE_OF_CONDUCT.md 
+      - Roadmap: about/ROADMAP.md
+      - FAQ: FAQ.md
+# extra_css:
+#   - all.css
+# utiliser l'ors de la compilation et y mettre sur false pour ne pas casses les chemin entre les fichier 
+# et a true pour utiliser le server  
+use_directory_urls: false
+#mettre a false pour executer mkdocs build
+# pour lancer le server sur une ip et un port spécifique : mkdocs serve --dev-addr 192.168.1.188:8000
+
+#pip install mkdocs-windmill-dark
+#pip install markdown-callouts
+
+
+#https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts

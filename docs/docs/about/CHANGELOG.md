@@ -20,3 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/fr/).
 - Windows implementation using `IAudioEndpointVolume`
 - Full adherence to SOLID principles
 - Initial documentation
+
+
+## [1.1.0] - 2025-05-15
+
+### Added
+
+- Added official documentation
+- support for different audio devices available on the machine

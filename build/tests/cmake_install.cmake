@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/alexp/OneDrive/Bureau/WinSpeak/tests
+# Install script for directory: C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/WinSpeak")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

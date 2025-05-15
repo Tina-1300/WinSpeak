@@ -1,4 +1,4 @@
-# Doc : WinSpeak
+# Documentation : WinSpeak
 
 
 

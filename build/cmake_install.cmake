@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/alexp/OneDrive/Bureau/WinSpeak
+# Install script for directory: C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/WinSpeak")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,35 +39,35 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak/include/")
+   "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/WinSpeak/include/")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak/include" TYPE DIRECTORY FILES "C:/Users/alexp/OneDrive/Bureau/WinSpeak/include/")
+  file(INSTALL DESTINATION "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/WinSpeak/include" TYPE DIRECTORY FILES "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/include/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak/lib/libWinSpeak.a")
+   "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/WinSpeak/lib/libWinSpeak.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/WinSpeak/lib" TYPE STATIC_LIBRARY FILES "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/libWinSpeak.a")
+  file(INSTALL DESTINATION "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/WinSpeak/lib" TYPE STATIC_LIBRARY FILES "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/libWinSpeak.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/CMakeFiles/WinSpeak.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
+  include("C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/CMakeFiles/WinSpeak.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/tests/cmake_install.cmake")
+  include("C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/tests/cmake_install.cmake")
 
 endif()
 
@@ -86,6 +86,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/alexp/OneDrive/Bureau/WinSpeak/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/alexp/OneDrive/Bureau/Library/WinSpeak/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
