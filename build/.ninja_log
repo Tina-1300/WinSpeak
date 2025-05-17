@@ -1,5 +1,0 @@
-# ninja log v6
-25	3628	7681481083807400	tests/CMakeFiles/tests.dir/test_WinSpeak.cpp.obj	5d1fbd8b3a13399c
-6	3844	7681481083651187	CMakeFiles/WinSpeak.dir/src/WinSpeak.cpp.obj	87f7dc91eff74b1b
-3845	5799	7681481121996145	libWinSpeak.a	ecbf7aac717d9c6a
-5799	6102	7681481141496957	tests/tests.exe	b36549674ac9ea2

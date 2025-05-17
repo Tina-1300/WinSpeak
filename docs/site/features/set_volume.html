@@ -121,17 +121,23 @@
 <li>Returns <code>true</code> if the volume was correctly modified, <code>false</code> in case of error.</li>
 </ul>
 <h3 id="example-of-use">Example of use</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;WinSpeak/WinSpeak.hpp&gt; 
+<pre><code class="language-cpp">#include &quot;WinSpeak/WinSpeak.hpp&quot;
+#include &quot;WinSpeak/AudioDeviceManager.hpp&quot;
+#include &lt;iostream&gt;
+
+// g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
+
 
 int main(){
 
-    WinSpeak::WinSpeak s;
+    try {
+        WinSpeak::AudioDeviceManager manager;
+        WinSpeak::WinSpeak speaker(&amp;manager);
 
-    if(s.set_volume(100.0f)){
-        std::cout &lt;&lt; &quot;Speaker 100%&quot; &lt;&lt; &quot;\n&quot;;
-    }else{
-        std::cout &lt;&lt; &quot;An error has occurred&quot; &lt;&lt; &quot;\n&quot;;
+        std::cout &lt;&lt; (speaker.set_volume(100.0f) ? &quot;Speaker 100%&quot; : &quot;An error has occurred&quot; ) &lt;&lt; &quot;\n&quot;;
+
+    }catch (const std::exception&amp; e){
+        std::cerr &lt;&lt; &quot;Error : &quot; &lt;&lt; e.what() &lt;&lt; &quot;\n&quot;;
     }
 
     return 0;

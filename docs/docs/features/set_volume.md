@@ -16,17 +16,23 @@ The volume to define must be a number between 0.0f and 100.0f (inclusive).
 
 ### Example of use
 ```cpp
+#include "WinSpeak/WinSpeak.hpp"
+#include "WinSpeak/AudioDeviceManager.hpp"
 #include <iostream>
-#include <WinSpeak/WinSpeak.hpp> 
+
+// g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
+
 
 int main(){
 
-    WinSpeak::WinSpeak s;
+    try {
+        WinSpeak::AudioDeviceManager manager;
+        WinSpeak::WinSpeak speaker(&manager);
 
-    if(s.set_volume(100.0f)){
-        std::cout << "Speaker 100%" << "\n";
-    }else{
-        std::cout << "An error has occurred" << "\n";
+        std::cout << (speaker.set_volume(100.0f) ? "Speaker 100%" : "An error has occurred" ) << "\n";
+
+    }catch (const std::exception& e){
+        std::cerr << "Error : " << e.what() << "\n";
     }
 
     return 0;

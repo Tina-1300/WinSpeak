@@ -16,17 +16,38 @@ allows you to change the current state of the speaker to either mute or unmute i
 
 ### Example of use
 ```cpp
+#include "WinSpeak/WinSpeak.hpp"
+#include "WinSpeak/AudioDeviceManager.hpp"
 #include <iostream>
-#include <WinSpeak/WinSpeak.hpp> 
+
+// g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
+
 
 int main(){
 
-    WinSpeak::WinSpeak s;
+    try {
+        WinSpeak::AudioDeviceManager manager;
+        WinSpeak::WinSpeak speaker(&manager);
 
-    if(s.set_mute(true)){
-        std::cout << "Speaker muted" << "\n";
-    }else{
-        std::cout << "An error has occurred" << "\n";
+        std::cout << "press enter to continue" << "\n";
+        std::cin.get();
+
+        if(speaker.set_mute(true)){
+            std::cout << "Speaker muted" << "\n";
+        }
+
+        std::cout << "press enter to continue" << "\n";
+        std::cin.get();
+
+        if(speaker.set_mute(false)){
+            std::cout << "Speaker unmuted" << "\n";
+        }
+
+        std::cout << "press enter to exit" << "\n";
+        std::cin.get();
+
+    }catch (const std::exception& e){
+        std::cerr << "Error : " << e.what() << "\n";
     }
 
     return 0;

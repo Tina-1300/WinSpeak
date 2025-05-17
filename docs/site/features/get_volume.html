@@ -106,14 +106,24 @@
 <li>returns the current speaker volume via a float type. </li>
 </ul>
 <h3 id="example-of-use">Example of use</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;WinSpeak/WinSpeak.hpp&gt; 
+<pre><code class="language-cpp">#include &quot;WinSpeak/WinSpeak.hpp&quot;
+#include &quot;WinSpeak/AudioDeviceManager.hpp&quot;
+#include &lt;iostream&gt;
+
+// g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
+
 
 int main(){
 
-    WinSpeak::WinSpeak s;
+    try {
+        WinSpeak::AudioDeviceManager manager;
+        WinSpeak::WinSpeak speaker(&amp;manager);
 
-    std::cout &lt;&lt; &quot;the current volume : &quot; &lt;&lt; s.get_volume() &lt;&lt; &quot; %&quot; &lt;&lt; &quot;\n&quot;;
+        std::cout &lt;&lt; &quot;the current volume : &quot; &lt;&lt; speaker.get_volume() &lt;&lt; &quot; %&quot; &lt;&lt; &quot;\n&quot;;
+
+    }catch (const std::exception&amp; e){
+        std::cerr &lt;&lt; &quot;Error : &quot; &lt;&lt; e.what() &lt;&lt; &quot;\n&quot;;
+    }
 
     return 0;
 }

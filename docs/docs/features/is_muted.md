@@ -15,17 +15,23 @@ No parameters..
 
 ### Example of use
 ```cpp
+#include "WinSpeak/WinSpeak.hpp"
+#include "WinSpeak/AudioDeviceManager.hpp"
 #include <iostream>
-#include <WinSpeak/WinSpeak.hpp> 
+
+// g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
+
 
 int main(){
 
-    WinSpeak::WinSpeak s;
+    try {
+        WinSpeak::AudioDeviceManager manager;
+        WinSpeak::WinSpeak speaker(&manager);
 
-    if(s.is_muted()){
-        std::cout << "Speaker is muted" << "\n";
-    }else{
-        std::cout << "Speaker is unmuted" << "\n";
+        std::cout << "Audio muted : " << (speaker.is_muted() ? "yes" : "no") << "\n";
+
+    }catch (const std::exception& e){
+        std::cerr << "Error : " << e.what() << "\n";
     }
 
     return 0;

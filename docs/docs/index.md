@@ -36,7 +36,7 @@ WinSpeak is a modern, powerful, and easy-to-use C++ library for controlling spea
 <br>
 
 ## Documentation :
-- [WinSpeak Documentation (1.0.0)](./features/features.md)
+- [WinSpeak Documentation (1.1.0)](./features/features.md)
 
 
 <br>
@@ -56,7 +56,7 @@ WinSpeak is a modern, powerful, and easy-to-use C++ library for controlling spea
 
 - **Author** : Tina
 - **Date** : 15/05/2025
-- **Version** : 1.0.0
+- **Version** : 1.1.0
 - **Copyright** : 2025 Tina - All rights reserved
 
 

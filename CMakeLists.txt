@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.10)
 
 # définition du nom de la library
 set(PROJECT_NAME WinSpeak)
-set(PROJECT_VERSION 1.0.0)
+set(PROJECT_VERSION 1.1.0)
 
 #project(WinSpeak)
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION} LANGUAGES CXX)
@@ -21,12 +21,17 @@ endif()
 
 set(SOURCES
     src/WinSpeak.cpp
+    src/AudioDeviceManager.cpp
 
 )
 
 set(HEADERS
-    include/${PROJECT_NAME}/ISpeak.hpp
     include/${PROJECT_NAME}/WinSpeak.hpp
+    include/${PROJECT_NAME}/AudioDeviceManager.hpp
+    include/${PROJECT_NAME}/IAudioProvider.hpp
+    include/${PROJECT_NAME}/IMuteControl.hpp
+    include/${PROJECT_NAME}/IVolumeControl.hpp
+
 
 )
 
@@ -44,9 +49,10 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 )
 
 # Linker les option l'ors de la compilation de la library static
+# Oleaut32
 target_link_libraries(${PROJECT_NAME} PRIVATE 
-    ole32
-    uuid    
+    ole32   
+    uuid 
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)

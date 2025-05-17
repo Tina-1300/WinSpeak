@@ -1,14 +1,14 @@
 #pragma once
-#include <endpointvolume.h>
-#include "ISpeak.hpp"
-
+#include "IVolumeControl.hpp"
+#include "IMuteControl.hpp"
+#include "IAudioProvider.hpp"
 
 namespace WinSpeak{
 
-    class WinSpeak : public ISpeak{
+    class WinSpeak : public IVolumeControl, IMuteControl{
         public: 
-            WinSpeak();
-            ~WinSpeak() override;
+            explicit WinSpeak(IAudioProvider* provider);
+            ~WinSpeak() override = default;
 
             /*
             No parameters..
@@ -36,7 +36,6 @@ namespace WinSpeak{
 
         private:
             IAudioEndpointVolume* endpointVolume;
-            void initialize();
     };
     
 }

@@ -1,19 +1,34 @@
-#include <iostream>
 #include "WinSpeak/WinSpeak.hpp"
+#include "WinSpeak/AudioDeviceManager.hpp"
+#include <iostream>
 
 // g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
 
 
 int main(){
 
-    WinSpeak::WinSpeak s;
+    try {
+        WinSpeak::AudioDeviceManager manager;
+        WinSpeak::WinSpeak speaker(&manager);
 
-    if(s.is_muted()){
-        s.set_mute(false);
-        s.set_volume(100.0f);
+        if (speaker.is_muted()){
+            speaker.set_mute(false);
+            speaker.set_volume(100.0f);
+        }
+        std::cout << "press (enter) to continute" << "\n";
+        std::cin.get();
+
+        std::cout << speaker.get_volume() << "\n";
+        std::cout << "activate mute" << "\n";
+
+        speaker.set_mute(true);
+
+        std::cout << "press (enter) to exit" << "\n";
+        std::cin.get();
+
+
+    }catch (const std::exception& e){
+        std::cerr << "Error: " << e.what() << "\n";
     }
 
-    std::cout << s.get_volume() << "\n";
-
-    std::cin.get();
 };

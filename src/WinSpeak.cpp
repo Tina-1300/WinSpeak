@@ -1,44 +1,33 @@
 #include "../include/WinSpeak/WinSpeak.hpp"
-#include <windows.h>
-#include <mmdeviceapi.h>
 #include <stdexcept>
-
 
 namespace WinSpeak{
 
-    WinSpeak::WinSpeak() : endpointVolume(nullptr){
-        initialize();
-    };
-
-    WinSpeak::~WinSpeak(){
-        if (endpointVolume){
-            endpointVolume->Release();
+    WinSpeak::WinSpeak(IAudioProvider* provider) : endpointVolume(provider->get_endpoint()){
+        if (!endpointVolume){
+            throw std::runtime_error("Invalid endpoint volume.");
         }
-        CoUninitialize();
     }
 
-    float WinSpeak::get_volume() const {
-        float currentVolume = 0.0f;
-        HRESULT hr = endpointVolume->GetMasterVolumeLevelScalar(&currentVolume);
+    float WinSpeak::get_volume() const{
+        float volume = 0.0f;
+        HRESULT hr = endpointVolume->GetMasterVolumeLevelScalar(&volume);
         if (FAILED(hr)){
-            throw std::runtime_error("Failed to get current volume level.");
+            throw std::runtime_error("Failed to get volume.");
         }
-        return currentVolume * 100; 
+        return volume * 100.0f;
     }
 
     bool WinSpeak::set_volume(float volume){
         if (volume < 0.0f || volume > 100.0f){
             throw std::invalid_argument("Volume must be between 0 and 100.");
-            return false;
         }
+
         HRESULT hr = endpointVolume->SetMasterVolumeLevelScalar(volume / 100.0f, nullptr);
-        if (FAILED(hr)){
-            return false; // Failed to set volume level.
-        }
-        return true;
+        return SUCCEEDED(hr);
     }
 
-    bool WinSpeak::is_muted() const {
+    bool WinSpeak::is_muted() const{
         BOOL isMuted = FALSE;
         HRESULT hr = endpointVolume->GetMute(&isMuted);
         if (FAILED(hr)){
@@ -49,45 +38,7 @@ namespace WinSpeak{
 
     bool WinSpeak::set_mute(bool mute){
         HRESULT hr = endpointVolume->SetMute(mute, nullptr);
-        return (FAILED(hr)) ? (
-            false // Failed to set mute status.
-        ) : true;
+        return SUCCEEDED(hr);
     }
-
-    
-    void WinSpeak::initialize(){
-        CoInitialize(nullptr);
-
-        IMMDeviceEnumerator* deviceEnumerator = nullptr;
-        HRESULT hr = CoCreateInstance(
-            __uuidof(MMDeviceEnumerator),
-            nullptr,
-            CLSCTX_ALL,
-            __uuidof(IMMDeviceEnumerator),
-            (void**)&deviceEnumerator);
-
-        if (FAILED(hr) || !deviceEnumerator){
-            throw std::runtime_error("Failed to create device enumerator.");
-        }
-
-        IMMDevice* defaultDevice = nullptr;
-        hr = deviceEnumerator->GetDefaultAudioEndpoint(eRender, eConsole, &defaultDevice);
-        deviceEnumerator->Release();
-
-        if (FAILED(hr) || !defaultDevice){
-            throw std::runtime_error("Failed to get default audio endpoint.");
-        }
-
-        hr = defaultDevice->Activate(
-            __uuidof(IAudioEndpointVolume),
-            CLSCTX_ALL,
-            nullptr,
-            (void**)&endpointVolume);
-        defaultDevice->Release();
-
-        if (FAILED(hr) || !endpointVolume){
-            throw std::runtime_error("Failed to activate audio endpoint.");
-        }
-    };
 
 }
