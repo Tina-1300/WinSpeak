@@ -22,13 +22,16 @@ This document describes the planned features, future enhancements, and long-term
 |:--------|:---------------|:------:|
 | 1.0.0 | Master Volume Control | ✅ Done |
 | 1.0.0 | is_muted / get_volume / set_volume / set_mute Function | ✅ Done |
-| 1.1.0 | Support for Controlling Multiple Audio Devices | 🔲 To Do |
 | 1.1.0 | Write Documentation                            | ✅ Done  |
-| 2.0.0 | Multi-Platform Release (Linux via Abstraction) | 🔲 To Do |
+| 1.1.0 | Refactor all code based on SOLID principles    | ✅ Done  |
+| 1.2.0 | Support for Controlling Multiple Audio Devices | 🔲 To Do |
+
 
 ---
 
 ## 🛤️ Future Ideas (Unplanned)
+
+**be Linux compatible**
 
 ---
 

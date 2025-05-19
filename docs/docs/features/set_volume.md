@@ -16,8 +16,8 @@ The volume to define must be a number between 0.0f and 100.0f (inclusive).
 
 ### Example of use
 ```cpp
-#include "WinSpeak/WinSpeak.hpp"
-#include "WinSpeak/AudioDeviceManager.hpp"
+#include <WinSpeak/WinSpeak.hpp>
+#include <WinSpeak/AudioDeviceManager.hpp>
 #include <iostream>
 
 // g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid

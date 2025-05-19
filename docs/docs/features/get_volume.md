@@ -15,8 +15,8 @@ No parameters..
 
 ### Example of use
 ```cpp
-#include "WinSpeak/WinSpeak.hpp"
-#include "WinSpeak/AudioDeviceManager.hpp"
+#include <WinSpeak/WinSpeak.hpp>
+#include <WinSpeak/AudioDeviceManager.hpp>
 #include <iostream>
 
 // g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid

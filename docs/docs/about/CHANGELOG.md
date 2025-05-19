@@ -22,9 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/fr/).
 - Initial documentation
 
 
-## [1.1.0] - 2025-05-15
+## [1.1.0] - 2025-05-20
 
 ### Added
 
 - Added official documentation
-- support for different audio devices available on the machine
+- Refactor all code based on SOLID principles

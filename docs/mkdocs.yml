@@ -34,7 +34,7 @@ nav:
 # utiliser l'ors de la compilation et y mettre sur false pour ne pas casses les chemin entre les fichier 
 # et a true pour utiliser le server  
 use_directory_urls: true
-#mettre a false pour executer mkdocs build
+#mettre a false pour executer : mkdocs build
 # pour lancer le server sur une ip et un port spécifique : mkdocs serve --dev-addr 192.168.1.188:8000
 
 #pip install mkdocs-windmill-dark
