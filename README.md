@@ -9,4 +9,9 @@ WinSpeak is a modern, powerful, and easy-to-use C++ library for controlling spea
 
 ## 📢 WinSpeak Announcements
 
-[https://tina-1300.github.io/documentation/WinSpeak/Announcement-WinSpeak.html](https://tina-1300.github.io/documentation/WinSpeak/Announcement-WinSpeak.html)
+[https://tina-1300.github.io/documentation/Announcement-WinSpeak/Announcement-WinSpeak.html](https://tina-1300.github.io/documentation/Announcement-WinSpeak/Announcement-WinSpeak.html)
+
+## 🌟 Soutenez le projet
+
+>🚀 This project is under active development. If you like it, consider giving it a ⭐ to support its evolution and encourage contributions!
+
