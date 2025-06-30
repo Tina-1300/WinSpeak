@@ -2,8 +2,7 @@
 #include "WinSpeak/AudioDeviceManager.hpp"
 #include <iostream>
 
-// g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
-
+// g++ -std=c++20 -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
 
 int main(){
 
@@ -15,6 +14,7 @@ int main(){
             speaker.set_mute(false);
             speaker.set_volume(100.0f);
         }
+
         std::cout << "press (enter) to continute" << "\n";
         std::cin.get();
 
@@ -25,7 +25,6 @@ int main(){
 
         std::cout << "press (enter) to exit" << "\n";
         std::cin.get();
-
 
     }catch (const std::exception& e){
         std::cerr << "Error: " << e.what() << "\n";
