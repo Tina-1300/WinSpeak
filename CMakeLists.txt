@@ -2,11 +2,11 @@
 # cmake --build .
 # cmake --install .
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.10) # minimum requier version 3.10
 
 # definition of the library name
 set(PROJECT_NAME WinSpeak)
-set(PROJECT_VERSION 1.1.0)
+set(PROJECT_VERSION 1.2.0)
 
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION} LANGUAGES CXX)
 
@@ -52,6 +52,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 target_link_libraries(${PROJECT_NAME} PRIVATE 
     ole32   
     uuid 
+    Oleaut32
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
@@ -70,6 +71,5 @@ install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 # part of the unit test
-
 enable_testing()
 add_subdirectory(tests)
