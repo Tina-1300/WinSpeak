@@ -1,0 +1,35 @@
+# Project : WinSpeak
+
+## Overview
+WinSpeak is a modern, powerful, and easy-to-use C++ library for controlling speakers in Windows. 
+It allows you to manage volume, mute/unmute speakers, and query audio status simply, quickly, and securely.
+
+## Language and Platform and Compiler and Standard language C++ and Build system
+- Language: C++
+- Platform: Windows only
+- Compiler: mingw
+- Standard: C++20
+- Build system: CMake
+
+## Project History
+- Initial development started: 27/04/2025
+- Current status: active development
+- Original author: Tina-1300
+
+## Code Organization
+- include/WinSpeak/ : public headers
+- src/ : implementation files
+- docs/ : additional documentation and examples
+- tests/ : unit tests
+
+## Core features:
+- Gets the current speaker volume.
+- Allows you to change the speaker volume.
+- Allows you to check whether the speakers are muted or unmuted.
+- Allows you to change the speaker state, putting them in mute or unmute mode.
+
+## Licensing
+Specify the license here MIT
+
+## GitHub
+- project repository: https://github.com/Tina-1300/WinSpeak
